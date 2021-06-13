@@ -35,6 +35,6 @@ export ROS_MASTER_URI=http://192.168.100.198:11311
 
 echo "running tmux..."
 
-/usr/bin/tmux new -d -s project11 rosrun rosmon rosmon --name=rosmon_molab_penguin molab_hardware ais.launch
+/usr/bin/tmux new -d -s project11 rosrun rosmon rosmon --name=rosmon_molab_penguin molab_hardware operator_mobile_lab.launch logDirectory:=${LOGDIR}
 
 } >> "${LOG_FILE}" 2>&1
