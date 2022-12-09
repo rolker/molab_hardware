@@ -1,0 +1,11 @@
+project11/platforms/molab:
+  robot_description: molab/robot_description
+  width: 2.2
+  length: 10.0
+  reference_x: 0.2
+  reference_y: 8.0
+  nav_sources:
+    ais:
+      position_topic: /molab/sensors/ais/position
+      orientation_topic: /molab/sensors/ais/orientation
+      velocity_topic: /molab/sensors/ais/velocity
