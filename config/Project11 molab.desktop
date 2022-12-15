@@ -1,0 +1,8 @@
+[Desktop Entry]
+Comment=
+Terminal=true
+Name=P11 molab
+Exec=/home/field/project11/catkin_ws/src/molab_hardware/scripts/start_tmux_molab.bash
+Type=Application
+Icon=/home/field/project11/catkin_ws/src/camp/src/camp--icon.png
+
