@@ -1,9 +1,15 @@
-base/dimension_to_bow: 2
-base/dimension_to_stern: 8
-base/dimension_to_stbd: 2
-base/dimension_to_port: .2
-base/heading: 227.0
-base/camera/url: http://192.168.50.55/
-base/camera/username: root
-base/camera/password: unmanned
-base/camera/height: 4
+project11/platforms/molab:
+  robot_description: molab/robot_description
+  width: 2.2
+  length: 10.0
+  reference_x: 0.2
+  reference_y: 8.0
+  nav_sources:
+    ais:
+      position_topic: /molab/sensors/ais/fix
+      orientation_topic: /molab/sensors/ais/heading
+      velocity_topic: /molab/sensors/ais/vel
+
+mru_transform/sensors:
+ - name: ais
+   topics: { position: 'sensors/ais/fix', orientation: 'sensors/ais/heading', velocity: 'sensors/ais/vel'}
