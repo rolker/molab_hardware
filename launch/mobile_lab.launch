@@ -4,6 +4,9 @@
   <arg name="logDirectory" default="$(find project11)/logs/ais/"/>
   <arg name="udp_bridge" default="False"/>
 
+  <arg name="send_heading" default="True"/>
+  <arg name="heading" default="0"/>
+
   <group ns="$(arg namespace)">
 
     <group ns="sensors">
@@ -23,6 +26,12 @@
 
         <node pkg="nmea_navsat_driver" type="nmea_topic_driver" name="navsat">
           <remap from="nmea_sentence" to="nmea"/>
+        </node>
+
+        <node if="$(arg send_heading)" pkg="molab_hardware" type="heading_sender.py" name="heading_sender">
+          <param name="frame_id" value="$(arg namespace)/ais"/>
+          <param name="heading" value="$(arg heading)"/>
+          <remap from="orientation" to="heading"/>
         </node>
 
       </group>
