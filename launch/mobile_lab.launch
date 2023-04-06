@@ -2,7 +2,7 @@
   <arg name="namespace" default="molab"/>
   <arg name="operator_namespace" default="operator"/>
   <arg name="logDirectory" default="$(find project11)/logs/ais/"/>
-  <arg name="udp_bridge" default="False"/>
+  <arg name="udp_bridge" default="True"/>
 
   <arg name="send_heading" default="True"/>
   <arg name="heading" default="0"/>
